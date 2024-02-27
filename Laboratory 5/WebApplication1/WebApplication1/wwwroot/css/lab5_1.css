@@ -1,0 +1,15 @@
+.label {
+    background-color: yellow;
+}
+
+.even {
+    background-color: aquamarine;
+}
+
+.odd {
+    background-color: brown;
+}
+
+#warn-info {
+    font-weight: 800;
+}

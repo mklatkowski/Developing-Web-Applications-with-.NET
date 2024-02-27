@@ -1,0 +1,73 @@
+/* Zadanie 3 */
+
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: scroll;
+    background-size: 100% 50%;
+}
+
+/* Zadanie 4 */
+
+
+#specified_id {
+    background-color: #555;
+}
+
+.specified_class {
+    background-color: aqua;
+}
+
+div li {
+    background-color: blueviolet;
+}
+
+article>p {
+    background-color: brown;
+}
+
+div.cl1.cl2 {
+    background-color: chartreuse;
+}
+
+a,
+footer {
+    background-color: black;
+    color: purple;
+}
+
+
+/* Zadanie 6 */
+
+#text1 {
+    color: #555;
+    background-color: #AAA;
+    font-weight: 200;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: overline;
+    text-decoration-color: aqua;
+    text-decoration-style: wavy;
+    line-height: 50px;
+}
+
+#text2 {
+    color: green;
+    background-color: hsl(240, 50%, 80%);
+    font-weight: 900;
+    font-size: x-small;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-style: double;
+    line-height: 100px;
+}
+
+/* Zadanie 7 */
+
+.border-element {
+    border-width: 5px;
+    border-style: dotted;
+    border-color: #333;
+}

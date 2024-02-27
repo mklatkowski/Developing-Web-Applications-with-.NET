@@ -1,0 +1,27 @@
+/* Zadanie 2 */
+
+h1 {
+    font-size: 80px;
+}
+
+a {
+    font-size: 20pt;
+}
+
+
+li {
+    font-size: 120%;
+}
+
+#li_test {
+    font-size: 1.5em;
+}
+
+/* Zadanie 3 */
+
+body {
+    background-image: url("background.jpg");
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: fixed;
+}

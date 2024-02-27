@@ -1,0 +1,7 @@
+C:\Users\micha\source\repos\Lab-06\Lab-06\obj\Debug\Lab-06.csproj.AssemblyReference.cache
+C:\Users\micha\source\repos\Lab-06\Lab-06\obj\Debug\Lab-06.csproj.CoreCompileInputs.cache
+C:\Users\micha\source\repos\Lab-06\Lab-06\bin\Debug\Lab-06.exe.config
+C:\Users\micha\source\repos\Lab-06\Lab-06\bin\Debug\Lab-06.exe
+C:\Users\micha\source\repos\Lab-06\Lab-06\bin\Debug\Lab-06.pdb
+C:\Users\micha\source\repos\Lab-06\Lab-06\obj\Debug\Lab-06.exe
+C:\Users\micha\source\repos\Lab-06\Lab-06\obj\Debug\Lab-06.pdb

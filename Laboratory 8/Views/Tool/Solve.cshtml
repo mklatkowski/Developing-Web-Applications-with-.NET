@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.title = "Quadratic Formula solution";
+}
+
+<link rel="stylesheet" href="~/css/solve.css" />
+
+<h2>@ViewBag.title</h2>
+
+<h4> Equation: @ViewBag.a * x^2 + @ViewBag.b * x + @ViewBag.c</h4>
+
+@{
+    if (ViewBag.result != null)
+    {
+            <p>Results:</p>
+            <ul class="@ViewBag.resultClass">
+                @foreach (var item in ViewBag.result)
+                {
+                    <li class="@ViewBag.resultClass">@item</li>
+                }
+            </ul>
+    }
+    <p class="@ViewBag.resultClass">@ViewBag.info</p>
+}

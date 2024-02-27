@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Lab08-MVC/1.0.0": {
+        "runtime": {
+          "Lab08-MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lab08-MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

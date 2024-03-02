@@ -1,0 +1,111 @@
+﻿@model List10Csharp.Models.CartModel
+
+<h1>Shopping Cart</h1>
+
+@if (Model.Items.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Items[0].ArticleName)
+                </th>
+                <th>
+                    Image
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Items[0].Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Items[0].ArticlePrice)
+                </th>
+                <th>
+                    Total
+                </th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var article in Model.Items)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => article.ArticleName)
+                    </td>
+                    <td>
+                        <img src="~/@article.ImagePath" alt="Article Image" width="100" height="100" />
+                    </td>
+                    <td>
+                        <form asp-controller="Shop" asp-action="UpdateCart" method="post">
+                            <input type="hidden" name="articleId" value="@article.ArticleId" />
+                            <input type="number" name="quantity" value="@article.Quantity" onkeydown="javascript: return false;" />
+                        </form>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => article.ArticlePrice)
+                    </td>
+                    <td>
+                        @((article.Quantity * article.ArticlePrice).ToString())
+                    </td>
+                    <td>
+                        <form asp-controller="Shop" asp-action="RemoveFromCart" method="post">
+                            <input type="hidden" name="articleId" value="@article.ArticleId" />
+                            <button type="submit">Remove</button>
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+@*     <table>
+        <thead>
+            <tr>
+                <th>Article</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Delete article</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.ArticleName</td>
+                    <td>
+                        <form asp-controller="Shop" asp-action="UpdateCart" method="post">
+                            <input type="hidden" name="articleId" value="@item.ArticleId" />
+                            <input type="number" name="quantity" value="@item.Quantity" onkeydown="javascript: return false;" />
+                        </form>
+                    </td>
+                    <td>@item.ArticlePrice</td>
+                    <td>@(item.Quantity * item.ArticlePrice)</td>
+                    <td>
+                        <form asp-controller="Shop" asp-action="RemoveFromCart" method="post">
+                            <input type="hidden" name="articleId" value="@item.ArticleId" />
+                            <button type="submit">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table> *@
+
+    <p>Total Cost: @Model.TotalCost</p>
+}
+else
+{
+    <p>Your shopping cart is empty.</p>
+}
+
+<a asp-action="Index">Continue Shopping</a>
+
+<script>
+    document.querySelectorAll('input[name="quantity"]').forEach(function (element) {
+        element.addEventListener('change', function () {
+            this.closest('form').submit();
+        });
+    });
+</script>

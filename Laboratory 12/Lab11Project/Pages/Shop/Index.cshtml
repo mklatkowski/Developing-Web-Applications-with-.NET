@@ -1,0 +1,17 @@
+﻿@page
+@model Lab11Project.Pages.Shop.IndexModel
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h1>Categories</h1>
+
+<ul>
+    @foreach (var category in Model.Categories)
+    {
+        <li>
+            <a asp-page="./Category" asp-route-id="@category.Id">@category.Name</a>
+        </li>
+    }
+</ul>
